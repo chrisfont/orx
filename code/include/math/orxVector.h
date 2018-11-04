@@ -240,7 +240,10 @@ static orxINLINE orxVECTOR *                  orxVector_Mul(orxVECTOR *_pvRes, c
  */
 static orxINLINE orxVECTOR *                  orxVector_Divf(orxVECTOR *_pvRes, const orxVECTOR *_pvOp1, orxFLOAT _fOp2)
 {
-  register orxFLOAT fRecCoef;
+#ifndef __cplusplus
+  register
+#endif
+  orxFLOAT fRecCoef;
 
   /* Checks */
   orxASSERT(_pvRes != orxNULL);
@@ -459,7 +462,10 @@ static orxINLINE orxVECTOR *                  orxVector_Round(orxVECTOR *_pvRes,
  */
 static orxINLINE orxFLOAT                     orxVector_GetSquareSize(const orxVECTOR *_pvOp)
 {
-  register orxFLOAT fResult;
+#ifndef __cplusplus
+  register
+#endif
+       orxFLOAT fResult;
 
   /* Checks */
   orxASSERT(_pvOp != orxNULL);
@@ -477,7 +483,10 @@ static orxINLINE orxFLOAT                     orxVector_GetSquareSize(const orxV
  */
 static orxINLINE orxFLOAT                     orxVector_GetSize(const orxVECTOR *_pvOp)
 {
-  register orxFLOAT fResult;
+#ifndef __cplusplus
+  register
+#endif
+       orxFLOAT fResult;
 
   /* Checks */
   orxASSERT(_pvOp != orxNULL);
@@ -497,7 +506,10 @@ static orxINLINE orxFLOAT                     orxVector_GetSize(const orxVECTOR 
 static orxINLINE orxFLOAT                     orxVector_GetSquareDistance(const orxVECTOR *_pvOp1, const orxVECTOR *_pvOp2)
 {
   orxVECTOR   vTemp;
-  register orxFLOAT fResult;
+#ifndef __cplusplus
+  register
+#endif
+       orxFLOAT fResult;
 
   /* Checks */
   orxASSERT(_pvOp1 != orxNULL);
@@ -521,7 +533,10 @@ static orxINLINE orxFLOAT                     orxVector_GetSquareDistance(const 
 static orxINLINE orxFLOAT                     orxVector_GetDistance(const orxVECTOR *_pvOp1, const orxVECTOR *_pvOp2)
 {
   orxVECTOR   vTemp;
-  register orxFLOAT fResult;
+#ifndef __cplusplus
+  register
+#endif
+       orxFLOAT fResult;
 
   /* Checks */
   orxASSERT(_pvOp1 != orxNULL);
@@ -544,7 +559,10 @@ static orxINLINE orxFLOAT                     orxVector_GetDistance(const orxVEC
  */
 static orxINLINE orxVECTOR *                  orxVector_Normalize(orxVECTOR *_pvRes, const orxVECTOR *_pvOp)
 {
-  register orxFLOAT fOp;
+#ifndef __cplusplus
+  register
+#endif
+     orxFLOAT fOp;
 
   /* Checks */
   orxASSERT(_pvRes != orxNULL);
@@ -592,7 +610,11 @@ static orxINLINE orxVECTOR *                  orxVector_2DRotate(orxVECTOR *_pvR
   /* Any other angle */
   else
   {
-    register orxFLOAT fSin, fCos;
+#ifndef __cplusplus
+    register
+#endif
+     orxFLOAT fSin, fCos;
+
 
     /* Gets cos & sin of angle */
     fCos = orxMath_Cos(_fAngle);

@@ -140,7 +140,10 @@ static orxINLINE orxAABOX *                   orxAABox_Set(orxAABOX *_pstRes, co
  */
 static orxINLINE orxBOOL                      orxAABox_IsInside(const orxAABOX *_pstBox, const orxVECTOR *_pvPosition)
 {
-  register orxBOOL bResult = orxFALSE;
+#ifndef __cplusplus
+  register
+#endif
+  orxBOOL bResult = orxFALSE;
 
   /* Checks */
   orxASSERT(_pstBox != orxNULL);
@@ -175,7 +178,10 @@ static orxINLINE orxBOOL                      orxAABox_IsInside(const orxAABOX *
  */
 static orxINLINE orxBOOL                      orxAABox_TestIntersection(const orxAABOX *_pstBox1, const orxAABOX *_pstBox2)
 {
-  register orxBOOL bResult = orxFALSE;
+#ifndef __cplusplus
+  register
+#endif
+  orxBOOL bResult = orxFALSE;
 
   /* Checks */
   orxASSERT(_pstBox1 != orxNULL);
@@ -210,7 +216,10 @@ static orxINLINE orxBOOL                      orxAABox_TestIntersection(const or
  */
 static orxINLINE orxBOOL                      orxAABox_Test2DIntersection(const orxAABOX *_pstBox1, const orxAABOX *_pstBox2)
 {
-  register orxBOOL bResult = orxFALSE;
+#ifndef __cplusplus
+  register
+#endif
+  orxBOOL bResult = orxFALSE;
 
   /* Checks */
   orxASSERT(_pstBox1 != orxNULL);
